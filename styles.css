@@ -1,111 +1,107 @@
-/* Import de la police Futura Bold */
+
 @import url('https://fonts.googleapis.com/css2?family=Futura:wght@700&display=swap');
 
-/* Style général pour le corps de la page */
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Empêche le défilement de la page */
+    overflow: hidden; 
     font-family: 'Futura', sans-serif;
     background-color: white;
 }
 
-/* Conteneur principal pour les images */
 #container {
     position: relative;
     width: 100vw;
     height: 100vh;
-    z-index: 10; /* Met les images au-dessus des informations de contact */
+    z-index: 10; 
     display: flex;
-    flex-wrap: wrap; /* Permet aux images de s'ajuster en cas de manque d'espace horizontal */
-    justify-content: center; /* Centre les images horizontalement */
-    align-items: center; /* Centre les images verticalement */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
 
 }
 
-/* Style pour les conteneurs d'images */
 .image-container {
-    position: absolute; /* Permet de positionner les images de manière aléatoire */
-    max-width: 375px; /* Deux fois plus grandes */
-    z-index: 1; /* Ordre de superposition par défaut */
-    transition: z-index 0.3s ease, opacity 1s ease; /* Transition douce pour le changement de z-index et d'opacité */
-    opacity: 0; /* Initialement invisible */
+    position: absolute; 
+    max-width: 375px; 
+    z-index: 1; 
+    transition: z-index 0.3s ease, opacity 1s ease; 
+    opacity: 0;
 }
 
-/* Style pour les images */
+
 .image-container img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* Style pour le bouton de fermeture */
+
 .close-button {
     position: absolute;
     opacity: 0;
     top: 0;
     right: 0;
-    padding: 4px 30px; /* Deux fois plus grande */
-    cursor: pointer; /* Change le curseur lorsque la souris passe sur le bouton */
-    font-size: 20px; /* Augmente la taille du texte */
-    display: none; /* Caché par défaut */
+    padding: 4px 30px; 
+    cursor: pointer; 
+    font-size: 20px; 
+    display: none; 
 }
-/* Style pour le bouton de fermeture global */
+
 #close-all {
   position: fixed;
   top: 10px;
   right: 10px;
   border-radius: 50%;
-  width: 40px; /* Taille du bouton */
-  height: 40px; /* Taille du bouton */
+  width: 40px; 
+  height: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px; /* Taille du texte de la croix */
-  cursor: pointer; /* Change le curseur lorsque la souris passe sur le bouton */
-  z-index: 20; /* Met le bouton au-dessus des autres éléments */
+  font-size: 24px; 
+  cursor: pointer; 
+  z-index: 20; 
   opacity: 0.5;
 }
 
-/* Affiche le bouton de fermeture au survol de l'image */
+
 .image-container:hover .close-button {
     display: block;
 }
 
-/* Style pour les informations de contact */
+
 #contact-info {
     position: absolute;
     top: 49%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 1; /* Met les informations de contact en arrière-plan */
+    z-index: 1; 
     font-size: 28px;
 }
 
-/* Style pour le logo */
+
 #logo {
     position: absolute;
-    top: 10%; /* Ajuster selon les besoins */
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 0; /* Met le logo en arrière-plan */
+    z-index: 0; 
 }
 
 #logo img {
-    max-width: 375px; /* Taille maximale du logo */
+    max-width: 375px; 
     margin-bottom: 20px;
 }
 
-/* Style pour le texte des informations de contact */
 #contact-info p {
     margin: 5px 0;
     
 }
 
 #contact-info a {
-    color: inherit; /* Garde la couleur du texte */
+    color: inherit; 
     cursor: pointer;
 
 }
