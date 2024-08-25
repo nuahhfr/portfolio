@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('toutlesitemdr');
     const contactInfo = document.getElementById('background'); 
     const totalPhotos = 196; 
-    const numberOfPhotosToShow = 20; 
+    const numberOfPhotosToShow = 100; 
     const images = []; 
 
 
